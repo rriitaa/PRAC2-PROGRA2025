@@ -23,7 +23,29 @@ public class Matematicas{
      * * Montecarlo. El parámetro `pasos` indica el número de puntos
      * * generado.
      * */
-    public static double generarNumeroPiIterativo(long pasos){
-        return 0; // Este código hay que cambiarlo.
+    public static double generarNumeroPiRecursivo(long pasos){
+      return generarNumeroPiRecursivoAux(pasos, 0);
+    }
+
+    /**
+     * Método auxiliar recursivo para calcular Pi.
+     * @param pasos Número total de iteraciones.
+     * @param count Cantidad de puntos dentro del círculo.
+     * @return Aproximación de Pi.
+     */
+    private static double generarNumeroPiRecursivoAux(long pasos, int count) {
+        if (pasos == 0) {
+            return 4.0 * ((double) count / pasos);
+        }
+
+        //usamos el metodo Math.ramdom
+        double x = Math.random();
+        double y = Math.random();
+
+        if ((x * x) + (y * y) < 1) {
+            count++;
+        }
+
+        return generarNumeroPiRecursivoAux(pasos - 1, count);
     }
 }
