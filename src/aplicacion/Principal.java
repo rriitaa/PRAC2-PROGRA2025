@@ -31,5 +31,9 @@ public class Principal{
 
 
 //PARA VER EL NUMER PI POR PANTALLA HAGO:
-//javac -d bin src/aplicacion/Principal.java src/mates/Matematicas.java
+//javac -d bin src/aplicacion/Principal.java src/mates/Matematicas.java -------> este si q funciona
+
+//pero no entiendo porq esto no va???
+// java -cp bin aplicacion.Principal 1000
+//da error en el bin???
 
