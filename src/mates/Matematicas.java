@@ -24,8 +24,11 @@ public class Matematicas{
      * * generado.
      * */
     public static double generarNumeroPiRecursivo(long pasos){
-      return generarNumeroPiRecursivoAux(pasos, 0);
+      if (pasos <= 0) {
+        throw new IllegalArgumentException("El número de pasos debe ser mayor que cero.");
     }
+    return generarNumeroPiRecursivoAux(pasos, 0);
+  }
 
     /**
      * Método auxiliar recursivo para calcular Pi.
@@ -35,7 +38,7 @@ public class Matematicas{
      */
     private static double generarNumeroPiRecursivoAux(long pasos, int count) {
         if (pasos == 0) {
-            return 4.0 * ((double) count / pasos);
+            return 4.0 * ((double) count / (double) 1); //usar 1 en vez de 0
         }
 
         //usamos el metodo Math.ramdom

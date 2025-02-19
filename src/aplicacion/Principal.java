@@ -30,3 +30,6 @@ public class Principal{
 }
 
 
+//PARA VER EL NUMER PI POR PANTALLA HAGO:
+//javac -d bin src/aplicacion/Principal.java src/mates/Matematicas.java
+
