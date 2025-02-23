@@ -34,6 +34,8 @@ public class Principal{
 //javac -d bin src/aplicacion/Principal.java src/mates/Matematicas.java -------> este si q funciona
 
 //pero no entiendo porq esto no va???
-// java -cp bin aplicacion.Principal 1000
-//da error en el bin???
+//java -cp bin aplicacion.Principal 1000 ---------> me sale: El nÃºmero PI es Infinity
+
+//he probado con esto:
+//"C:\Program Files\Java\jdk-17\bin\java" -cp bin aplicacion.Principal 1000 -------->El nÃºmero PI es 3.124
 

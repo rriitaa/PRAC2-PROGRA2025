@@ -27,7 +27,7 @@ public class Matematicas{
       if (pasos <= 0) {
         throw new IllegalArgumentException("El número de pasos debe ser mayor que cero.");
     }
-    return generarNumeroPiRecursivoAux(pasos, 0);
+    return generarNumeroPiRecursivoAux(pasos, 0, pasos);
   }
 
     /**
@@ -36,9 +36,9 @@ public class Matematicas{
      * @param count Cantidad de puntos dentro del círculo.
      * @return Aproximación de Pi.
      */
-    private static double generarNumeroPiRecursivoAux(long pasos, long count) {
+    private static double generarNumeroPiRecursivoAux(long pasos, long count, long total_pasos) {
         if (pasos == 0) {
-            return 4.0 * ((double) count / (double) pasos); //usar 1 en vez de 0
+            return 4.0 * ((double) count / total_pasos); //usar 1 en vez de 0
         }
 
         //usamos el metodo Math.ramdom
@@ -49,7 +49,7 @@ public class Matematicas{
             count++;
         }
 
-        return generarNumeroPiRecursivoAux(pasos - 1, count);
+        return generarNumeroPiRecursivoAux(pasos - 1, count, total_pasos);
     }
 }
 
