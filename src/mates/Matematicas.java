@@ -42,6 +42,7 @@ public class Matematicas{
         }
 
         //usamos el metodo Math.ramdom
+        //genera dos nums aleatorios entre 0 y 1 para simular un punto en el plano (x, y).
         double x = Math.random();
         double y = Math.random();
 
@@ -54,4 +55,20 @@ public class Matematicas{
 }
 
 //comentarios del codigo:
-//
+//Si pasos es 0 o menor q 0, lanza un error porque no tiene sentido hacer el cálculo.
+//hago metodo auxiliar que hará el calculo real, iniciando con count = 0 y guardando total_pasos
+//Metodo auxiliar recursivo que hace el cálculo de Pi
+//si pasos llega a 0, calcula Pi usando la fórmula: 4*(puntos dentro circulo/total puntos)
+//genera dos nums aleatorios entre 0 y 1 para simular un punto en el plano (x, y).
+//Verifica si el punto generado está dentro del círculo unitario:
+//si x² + y² < 1, el punto está dentro, así que suma 1 a count
+//hago llamada recursiva (metodo aux)
+//la llamada hace: reduce pasos en 1, sigue contando cuando puntos hay dentro circulo, se repite hasta q pasos llegue a 0
+
+
+//RESUMEN:
+//genero puntos aleatorios (x, y) dentro de un cuadrado.
+//uenta cuántos caen dentro de un círculo inscrito.
+//usa la proporción puntos en el círculo / total de puntos para aproximar Pi.
+//lo hace recursivamente hasta que pasos llega a 0
+
