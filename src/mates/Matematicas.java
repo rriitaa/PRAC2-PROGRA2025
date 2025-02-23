@@ -36,9 +36,9 @@ public class Matematicas{
      * @param count Cantidad de puntos dentro del círculo.
      * @return Aproximación de Pi.
      */
-    private static double generarNumeroPiRecursivoAux(long pasos, int count) {
+    private static double generarNumeroPiRecursivoAux(long pasos, long count) {
         if (pasos == 0) {
-            return 4.0 * ((double) count / (double) 1); //usar 1 en vez de 0
+            return 4.0 * ((double) count / (double) pasos); //usar 1 en vez de 0
         }
 
         //usamos el metodo Math.ramdom
